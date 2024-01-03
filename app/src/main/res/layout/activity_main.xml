@@ -4,15 +4,168 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0e49b5"
     tools:context=".MainActivity">
 
+
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:fontFamily="sans-serif-black"
+        android:text="Benchmark Protocols"
+        android:textAlignment="center"
+        android:textColor="#f1f1f6"
+        android:textFontWeight="800"
+        android:textSize="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/StartButton"
+        style="@android:style/Widget.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="52dp"
+        android:background="#0e49b5"
+        android:text="Start"
+        android:textColor="#f1f1f6"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="412dp"
+        android:layout_height="52dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/arc_3"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="414dp"
+        android:layout_height="324dp"
+        android:background="#f1f1f6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="287dp"
+        android:layout_height="424dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="56dp"
+        android:background="@color/white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:context=".MainActivity"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Sensor Type"
+            android:textAlignment="center"
+            android:textColor="#0e49b5"
+            android:textFontWeight="600"
+            android:textSize="26dp"
+            app:layout_constraintBottom_toTopOf="@+id/planets_spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/planets_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginBottom="37dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#0e49b5"
+            android:textFontWeight="800"
+            android:textSize="30dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="225dp"
+            android:layout_height="195dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.46">
+
+            <CheckBox
+                android:id="@+id/radio_mqtt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:clickable="true"
+                android:fontFamily="sans-serif-black"
+                android:text="MQTT"
+                android:textAlignment="center"
+                android:textColor="#0e49b5"
+                android:textFontWeight="800"
+                android:textSize="30dp" />
+
+            <CheckBox
+                android:id="@+id/radio_xmpp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="XMPP"
+                android:textAlignment="center"
+                android:textColor="#0e49b5"
+                android:textFontWeight="800"
+                android:textSize="30dp" />
+
+            <CheckBox
+                android:id="@+id/radio_coap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="CoAP"
+                android:textAlignment="center"
+                android:textColor="#0e49b5"
+                android:textFontWeight="800"
+                android:textSize="30dp" />
+
+
+        </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
