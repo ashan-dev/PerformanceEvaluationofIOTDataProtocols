@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0e49b5"
+    tools:context=".DetailedScreen">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Protocol Details"
+        android:textAlignment="center"
+        android:textColor="#f1f1f6"
+        android:textFontWeight="800"
+        android:textSize="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/StartButton"
+        style="@android:style/Widget.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="36dp"
+        android:background="#0e49b5"
+        android:text="Back"
+        android:textColor="#f1f1f6"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="412dp"
+        android:layout_height="52dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/arc_3"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="414dp"
+        android:layout_height="324dp"
+        android:background="#f1f1f6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/textBox1"
+        android:layout_width="294dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="124dp"
+        android:background="@color/white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textBox2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".DetailedScreen"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="143dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Throughput"
+            android:textAlignment="center"
+            android:textColor="#0e49b5"
+            android:textFontWeight="800"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/mqtt_throughput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mqtt_throughput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="sans-serif-black"
+            android:text="MQTT - 95%"
+            android:textAlignment="center"
+            android:textColor="#0e49b5"
+            android:textFontWeight="700"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/xmpp_throughput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/xmpp_throughput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="sans-serif-black"
+            android:text="XMPP -60%"
+            android:textAlignment="center"
+            android:textColor="#0e49b5"
+            android:textFontWeight="700"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/coap_throughput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mqtt_throughput" />
+
+        <TextView
+            android:id="@+id/coap_throughput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="sans-serif-black"
+            android:text="CoAP -70%"
+            android:textAlignment="center"
+            android:textColor="#0e49b5"
+            android:textFontWeight="700"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/xmpp_throughput" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/textBox2"
+        android:layout_width="294dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="404dp"
+        android:background="@color/white"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".DetailedScreen"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/mqtt_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="sans-serif-black"
+            android:text="MQTT Speed - 0.112ms"
+            android:textAlignment="center"
+            android:textColor="#0e49b5"
+            android:textFontWeight="700"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/xmpp_speed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/xmpp_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="sans-serif-black"
+            android:text="XMPP Speed - 0.114ms"
+            android:textAlignment="center"
+            android:textColor="#0e49b5"
+            android:textFontWeight="700"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/coap_speed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mqtt_speed" />
+
+        <TextView
+            android:id="@+id/coap_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="sans-serif-black"
+            android:text="CoAP Speed - 0.118ms"
+            android:textAlignment="center"
+            android:textColor="#0e49b5"
+            android:textFontWeight="700"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/xmpp_speed" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Execution Speed"
+            android:textAlignment="center"
+            android:textColor="#0e49b5"
+            android:textFontWeight="800"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/mqtt_speed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
